@@ -1,3 +1,7 @@
+<?php
+    require 'models/User.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,9 +17,20 @@
     <hr/>
     
     <?php
-        include 'userTemplate.php';
+        $account = User::showAccountData($pdo);
+    
+        if(!isset($account)){
+            echo "Erro ao acessar dados da conta!";
+        } else {
+            include 'userTemplate.php';
+        }
     ?>
 
+    <hr/>
+    
+    <?php
+        include 'transactionTemplate.php';
+    ?>
     <a href="models/logout.php">Sair</a>
 </body>
 </html>
