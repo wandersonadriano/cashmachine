@@ -1,8 +1,8 @@
 <?php
 
     $sdn = 'mysql:dbname=projeto_caixaeletronico;host=localhost';
-    $dbuser = 'root';
-    $dbpassword = 'M1ch43lJ4ck50n';
+    $dbuser = 'developer';
+    $dbpassword = '';
 
     try{
         $pdo = new PDO($sdn, $dbuser, $dbpassword);
