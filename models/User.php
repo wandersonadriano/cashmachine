@@ -16,6 +16,7 @@ public function showAccountData(PDO $pdo){
             $data = $sql->fetch();
 
             $accountData = [
+                'id' => $data['id'],
                 'accountHolder' => $data['titula'],
                 'branch' => $data['agencia'],
                 'accountNumber' => intval($data['conta'] / 10),
@@ -23,16 +24,7 @@ public function showAccountData(PDO $pdo){
                 'balance' => $data['saldo']
             ];
         }
-            /*
-            $accountHolder = $accountData['titula'];
-            $branch = $accountData['agencia'];
-            $accountNumber = intval($accountData['conta'] / 10);
-            $accountNumberDigit = $accountData['conta'] % 10;
-            $balance = $accountData['saldo'];
-            */
-        }
         return $accountData;
-    }
-
-    
+        }
+    }   
 }

@@ -1,5 +1,6 @@
 <?php
     require 'models/User.php';
+    require 'models/Transaction.php';
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +30,12 @@
     <hr/>
     
     <?php
-        include 'transactionTemplate.php';
+        $transactions = Transaction::showTransactions($pdo, $_SESSION['account-id']);
+        if(isset($transactions)){
+            print_r($transactions);
+        }
+        
+        #include 'transactionTemplate.php';
     ?>
     <a href="models/logout.php">Sair</a>
 </body>
