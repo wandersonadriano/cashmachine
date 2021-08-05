@@ -1,8 +1,22 @@
 <?php
 class Transaction{
 
-    public function addNewTransaction(PDO $pdo){
-        
+    public function addNewTransaction(PDO $pdo, $id){
+        if(isset($id) && !empty($id) && isset($_POST['amount']) && !empty($_POST['amount'])){
+
+            $transctionType = addslashes($_GET['transactionType']);
+            $amount = str_replace(',', '.', addslashes($_POST['amount']));
+            $amount = floatval($amount);
+
+            $sql = "INSERT INTO historico (id_conta, tipo, valor, data_operacao)
+            VALUES (:accountId, :transactionType, :amount, NOW()";
+            $sql = $pdo->prepare($sql);
+            $sql->bindValue(':accountId', $id);
+            $sql->bindValue(':transactionType', $transctionType);
+            $sql->bindValue(':amount', $amount);
+            $sql->execute();    
+
+        }
     }
 
     public function showTransactions(PDO $pdo, $id){
@@ -25,4 +39,8 @@ class Transaction{
         return $array;
     }
 
+
+    private function updateBalance($id, $amount, $transctionType){
+        $sql = "UPDATE conta SET saldo = saldo + :amount";
+    }
 }

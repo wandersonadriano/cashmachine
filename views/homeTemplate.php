@@ -27,16 +27,22 @@
         }
     ?>
 
+    <a href="models/logout.php">Sair</a>
+    <hr/>
+    
+    <a href="views/transactionTemplate.php?transactionType=0">DEPOSITAR</a><br/>
+    <a href="views/transactionTemplate.php?transactionType=1">RETIRAR</a>
+    
     <hr/>
     
     <?php
-        $transactions = Transaction::showTransactions($pdo, $_SESSION['account-id']);
+        /*$transactions = Transaction::showTransactions($pdo, $_SESSION['account-id']);
         if(isset($transactions)){
             print_r($transactions);
-        }
+        }*/
         
         #include 'transactionTemplate.php';
     ?>
-    <a href="models/logout.php">Sair</a>
+    
 </body>
 </html>
