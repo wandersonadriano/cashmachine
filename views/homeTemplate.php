@@ -34,14 +34,15 @@
     <a href="views/transactionTemplate.php?transactionType=1">RETIRAR</a>
     
     <hr/>
-    
+
     <?php
-        /*$transactions = Transaction::showTransactions($pdo, $_SESSION['account-id']);
-        if(isset($transactions)){
-            print_r($transactions);
-        }*/
+        $transactions = new Transaction();
         
-        #include 'transactionTemplate.php';
+        $transactions = $transactions->showTransactions($pdo, $_SESSION['account-id']);
+        if(isset($transactions) && !empty($transactions)){
+            include 'passbookTemplate.php';
+        }
+        
     ?>
     
 </body>

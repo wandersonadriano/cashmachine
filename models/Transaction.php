@@ -2,30 +2,37 @@
 class Transaction{
 
     public function addNewTransaction(PDO $pdo, $id){
-        if(isset($id) && !empty($id) && isset($_POST['amount']) && !empty($_POST['amount'])){
+        if((isset($id) && !empty($id)) && (isset($_POST['amount']) && !empty($_POST['amount'])) && 
+            isset($_GET['transactionType']) && 
+            ($_GET['transactionType'] == 0 || $_GET['transactionType'] == 1)
+        ){
 
-            $transctionType = addslashes($_GET['transactionType']);
+            $transctionType = intval($_GET['transactionType']);
             $amount = str_replace(',', '.', addslashes($_POST['amount']));
             $amount = floatval($amount);
 
-            $sql = "INSERT INTO historico (id_conta, tipo, valor, data_operacao)
-            VALUES (:accountId, :transactionType, :amount, NOW()";
+            $sql = "INSERT INTO historico SET id_conta = :accountId, tipo = :transactionType, valor = :amount, data_operacao = NOW()";
             $sql = $pdo->prepare($sql);
             $sql->bindValue(':accountId', $id);
             $sql->bindValue(':transactionType', $transctionType);
             $sql->bindValue(':amount', $amount);
-            $sql->execute();    
-
+            $sql->execute();
+            
+            $this->updateBalance($pdo, $id, $amount, $transctionType);
+            
+            header('Location: ../index.php');
+            exit;
         }
     }
 
     public function showTransactions(PDO $pdo, $id){
-        $sql = "SELECT * WHERE id_conta = :id DESC";
+        
+        $sql = "SELECT * FROM historico WHERE id_conta = :id ORDER BY data_operacao DESC";
         $sql = $pdo->prepare($sql);
         $sql->bindValue(':id', $id);
         $sql->execute();
         
-        $array = [];
+        $array = array();
         if($sql->rowCount() > 0){
             foreach($sql->fetchAll() as $data){
                 array_push($array,[
@@ -40,7 +47,16 @@ class Transaction{
     }
 
 
-    private function updateBalance($id, $amount, $transctionType){
-        $sql = "UPDATE conta SET saldo = saldo + :amount";
+    private function updateBalance($pdo, $id, $amount, $transctionType){
+        if($transctionType == 0){
+            $sql = "UPDATE conta SET saldo = (saldo + :amount) WHERE id = :id";
+        } else if($transctionType == 1) {
+            $sql = "UPDATE conta SET saldo = (saldo - :amount) WHERE id = :id";
+        }
+
+        $sql = $pdo->prepare($sql);
+        $sql->bindValue(':amount', $amount);
+        $sql->bindValue(':id', $id);
+        $sql->execute();
     }
 }
