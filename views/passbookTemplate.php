@@ -13,7 +13,7 @@
             ?>
             <tr>
                 <td><?php echo $transaction['transactionDate']?></td>
-                <td><?php echo $transaction['amount']?></td>
+                <td><?php echo ($transaction['transactionType'] == 0) ? $transaction['amount'] : "-".$transaction['amount'] ?></td>
             </tr>
             <?php
             endforeach;  
