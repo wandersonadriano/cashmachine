@@ -19,6 +19,7 @@
                     <br/><br/>
                     <button type="submit">Entrar</button>
                 </form>
+                <a href="">Esqueceu a senha?</a>
             </div>
         </div>
     </div>
