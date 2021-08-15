@@ -9,8 +9,11 @@
     background-color: #0000cd;
 }
 
-.loginpage .container{
+.container{
     display: flex;
+}
+
+.loginpage .container{
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -83,3 +86,16 @@ i{
     color: #FFFFFF;
 }
 
+header{
+    background-color: #191970;
+    color: #FFFFFF;
+    padding: 10px 20px;
+}
+
+.account--info{
+    background-color: #191970;
+    color: #FFFFFF;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+}

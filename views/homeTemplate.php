@@ -11,39 +11,38 @@
     <meta name="viewport" content="width=device-width, inicial-scale=1.0"/>
 </head>
 <body>
-    <h1>
-        Banco WMC
-    </h1>
-    
-    <hr/>
-    
-    <?php
-        $account = User::showAccountData($pdo);
-    
-        if(!isset($account)){
-            echo "Erro ao acessar dados da conta!";
-        } else {
-            include 'userTemplate.php';
-        }
-    ?>
-
-    <a href="models/logout.php">Sair</a>
-    <hr/>
-    
-    <a href="views/transactionTemplate.php?transactionType=0">DEPOSITAR</a><br/>
-    <a href="views/transactionTemplate.php?transactionType=1">RETIRAR</a>
-    
-    <hr/>
-
-    <?php
-        $transactions = new Transaction();
+    <div id="home">
+        <header>
+            <h1>
+                WBank
+            </h1>
+        </header>
         
-        $transactions = $transactions->showTransactions($pdo, $_SESSION['account-id']);
-        if(isset($transactions) && !empty($transactions)){
-            include 'passbookTemplate.php';
-        }
+        <?php
+            $account = User::showAccountData($pdo);
         
-    ?>
-    
+            if(!isset($account)){
+                echo "Erro ao acessar dados da conta!";
+            } else {
+                include 'userTemplate.php';
+            }
+        ?>
+
+        
+        <a href="views/transactionTemplate.php?transactionType=0">DEPOSITAR</a><br/>
+        <a href="views/transactionTemplate.php?transactionType=1">RETIRAR</a>
+        
+        <hr/>
+
+        <?php
+            $transactions = new Transaction();
+            
+            $transactions = $transactions->showTransactions($pdo, $_SESSION['account-id']);
+            if(isset($transactions) && !empty($transactions)){
+                include 'passbookTemplate.php';
+            }
+            
+        ?>
+    </div>
 </body>
 </html>

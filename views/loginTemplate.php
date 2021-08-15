@@ -9,7 +9,7 @@
                 <form method="POST" action="models/login.php">
                     <label>    
                         <i class="fas fa-user" aria-hidden="true" title="Nº da Conta"></i>
-                        <input type="text" name="account_number" id="field-account_number" placeholder="Nº da conta" pattern="[0-9]{10}"/>
+                        <input type="text" name="account_number" id="field-account_number" placeholder="Nº da conta" pattern="[0-9]{7-10}"/>
                     </label>
                     <br/><br/>
                     <label> 
