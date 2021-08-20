@@ -7,8 +7,12 @@
         CC: <?php echo $account['accountNumber']; ?>-
             <?php echo $account['accountNumberDigit']; ?>
     </div>
-    <div class="account--balance">
-        Saldo: <?php echo number_format($account['balance'], 2, '.', ','); ?>
-    </div>
+   
     <a href="models/logout.php">Sair</a>
+</div>
+<div class="balance--info">
+    <div class="balance--title">Saldo</div>
+    <div class="account--balance">
+        <?php echo "R$ ".number_format($account['balance'], 2, '.', ','); ?>
+    </div>
 </div>
