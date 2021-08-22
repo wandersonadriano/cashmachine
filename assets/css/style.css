@@ -9,7 +9,7 @@
     background-color: #0000cd;
 }
 
-.container{
+.loginpage .container{
     display: flex;
 }
 
@@ -86,31 +86,58 @@ i{
     color: #FFFFFF;
 }
 
+header .container,
+.transaction .container,
+.account--info .container{
+    width: 80%;
+    margin: auto;
+}
+
 header{
     background-color: #191970;
     color: #FFFFFF;
-    padding: 10px 100px;
     font-size: 25px;
 }
 
 .account--info{
     background-color: #191970;
     color: #FFFFFF;
-    padding-left: 100px;
-    padding-right: 100px;
     font-size: 18px;
 }
 
 .balance--info{
-    background-color: #eeeef7;
+    background-image: linear-gradient(to bottom, #191970 30%, #0000cd 70%);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    color: #FFF;
 }
 
 .balance--title{
-    font-size: 22px;
+    font-size: 30px;
     font-weight: bold;
+}
+
+.account--balance{
+    font-size: 25px;
+}
+
+.transaction--buttons{
+    display: flex;
+}
+
+.transaction--buttons a{
+    display: block;
+    width: 100px;
+    background-color: #191970;
+    margin-top: 5px;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding: 5px 0px;
+    border-radius: 2px;
+    text-decoration: none;
+    text-align: center;
+    color: #FFFFFF;
 }

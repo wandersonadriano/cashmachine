@@ -13,9 +13,11 @@
 <body>
     <div id="home">
         <header>
-            <h1>
-                WBank
-            </h1>
+            <div class="container">
+                <h1>
+                    WBank
+                </h1>
+            </div>
         </header>
         
         <?php
@@ -27,12 +29,6 @@
                 include 'userTemplate.php';
             }
         ?>
-
-        
-        <a href="views/transactionTemplate.php?transactionType=0">DEPOSITAR</a><br/>
-        <a href="views/transactionTemplate.php?transactionType=1">RETIRAR</a>
-        
-        <hr/>
 
         <?php
             $transactions = new Transaction();
