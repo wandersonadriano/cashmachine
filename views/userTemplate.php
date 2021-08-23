@@ -16,7 +16,7 @@
 <div class="balance--info">
     <div class="balance--title">Saldo</div>
     <div class="account--balance">
-        <?php echo "R$ ".number_format($account['balance'], 2, '.', ','); ?>
+        <?php echo "R$ ".number_format($account['balance'], 2, ',', '.'); ?>
     </div>
     <div class="transaction--buttons">
         <a href="views/transactionTemplate.php?transactionType=0">DEPOSITAR</a><br/>
