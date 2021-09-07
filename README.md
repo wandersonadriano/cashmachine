@@ -1,8 +1,11 @@
-Projeto de um caixa eletrônico usando PHP, HTML e CSS
+**Projeto de um caixa eletrônico:**
 
-O sistema contém:
+**O sistema contém:**
 
-    Uma tela de login,
-    Uma tela exibindo os dados dos clientes e
-    as movimentações/extrato da conta,
-    permite adicionar uma nova transação de depósito ou saque de dinheiro.
+    * Tela de login:
+        ![Tela de login]
+        (assets/images/cashmachine_loginpage.png)
+    * Home exibindo:
+        - Informações da conta do usuário,
+        - As movimentações/extrato da conta e
+        - permite adicionar uma nova transação de depósito ou saque de dinheiro.
