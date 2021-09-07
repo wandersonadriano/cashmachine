@@ -19,7 +19,7 @@
         <?php echo "R$ ".number_format($account['balance'], 2, ',', '.'); ?>
     </div>
     <div class="transaction--buttons">
-        <a href="views/transactionTemplate.php?transactionType=0">DEPOSITAR</a><br/>
-        <a href="views/transactionTemplate.php?transactionType=1">RETIRAR</a>
+        <a href="http://localhost:8080/cashmachine/index.php?transactionType=0">DEPOSITAR</a-->
+        <a href="http://localhost:8080/cashmachine/index.php?transactionType=1">SACAR</a>
     </div>
 </div>

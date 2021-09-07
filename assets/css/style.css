@@ -161,7 +161,7 @@ header{
     align-items: center;
 }
 
-.transaction-title{
+.transaction--title{
     width: 100%;
     margin-top: 20px;
     font-size: 25px;
@@ -185,4 +185,33 @@ header{
 
 .table-item--values{
     padding: 5px;
+}
+
+.transaction--form{
+    display: flex;
+    flex-direction: column;
+    background-color: #BBBBBB;
+    padding-bottom: 10px;
+}
+
+.table-item--form{
+    padding: 10px 10px;
+}
+
+.transaction--form input{
+    width: 100%;
+    height: 30px;
+}
+
+.transaction--form button{
+    width: 100px;
+    background-color: #191970;
+    margin-top: 5px;
+    margin-right: 15px;
+    margin-left: 15px;
+    border: 0;
+    border-radius: 2px;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
 }

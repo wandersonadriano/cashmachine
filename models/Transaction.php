@@ -20,7 +20,7 @@ class Transaction{
             
             $this->updateBalance($pdo, $id, $amount, $transctionType);
             
-            header('Location: ../index.php');
+            header('Location: http://localhost:8080/cashmachine/index.php');
             exit;
         }
     }

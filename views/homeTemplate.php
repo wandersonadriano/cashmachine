@@ -8,7 +8,7 @@
 <head>
     <title>Caixa Eletrônico</title>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, inicial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 <body>
     <div id="home">
@@ -33,9 +33,14 @@
         <?php
             $transactions = new Transaction();
             
-            $transactions = $transactions->showTransactions($pdo, $_SESSION['account-id']);
-            if(isset($transactions) && !empty($transactions)){
-                include 'passbookTemplate.php';
+            if(isset($_GET['transactionType'])){
+                $transactions->addNewTransaction($pdo, $_SESSION['account-id']);
+                include 'transactionTemplate.php';
+            } else {
+                $transactions = $transactions->showTransactions($pdo, $_SESSION['account-id']);
+                if(isset($transactions) && !empty($transactions)){
+                    include 'passbookTemplate.php';
+                }
             }
             
         ?>

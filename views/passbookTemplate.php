@@ -1,6 +1,6 @@
 <div class="transaction">
     <div class="container">
-        <div class="transaction-title">
+        <div class="transaction--title">
             Extrato/Movimentações
         </div>
         <div class="transaction--table">
