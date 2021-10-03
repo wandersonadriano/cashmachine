@@ -12,10 +12,11 @@
          <form method="POST">
             <div class="table-item--form">
                <input type="text" name="amount" pattern="[0-9.,]{1,}"/>
-            </div>
-            <div class="transaction--buttons">
-               <button type="submit">Confirmar</button>
-               <a href="http://localhost:8080/cashmachine/index.php">Cancelar</a>
+               
+               <div class="transaction--buttons">
+                  <button type="submit">Confirmar</button>
+                  <a href="http://localhost:8080/cashmachine/index.php">Cancelar</a>
+               </div>
             </div>
          </form>
       </div>

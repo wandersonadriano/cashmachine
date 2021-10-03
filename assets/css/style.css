@@ -5,55 +5,61 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+body{
+    background-color: #DDD;
+}
+
 .loginpage{
     background-color: #0000cd;
 }
 
 .loginpage .container{
     display: flex;
-}
-
-.loginpage .container{
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
+    padding: 0 20px;
 }
 
 .loginarea{
+    width: 100%;
     background-color: #191970;
-    padding: 20px ;
+    padding: 20px;
     border-radius: 10px;
     color: #FFFFFF;
 }
 
 .loginarea--bankname{
-    font-size: 40px;
+    font-size: 50px;
+    text-align: center;
     font-weight: bold;
 }
 
 .loginarea--form{
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
 }
 
 .loginarea--form label{
     display: flex;
+    margin-top: 30px;
 }
 
 i{
     background-color: #BBBBBB;
-    padding: 4px;
+    padding: 5px;
     border: 0;
-    font-size: 20px;
+    font-size: 25px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     cursor: pointer;
 }
 
 .loginarea--form input{
-    width: 200px;
-    height: 30px;
-    padding-left: 4px;
-    font-size: 20px;
+    width: 100%;
+    padding-left: 10px;
+    font-size: 25px;
     line-height: 30px;
     border: 0;
     border-top-right-radius: 5px;
@@ -67,10 +73,10 @@ i{
 }
 
 .loginarea--form button{
+    width: 100%;
+    margin-top: 30px;
     background-color: #FFFFFF;
-    width: 80%;
-    margin-left: 20px;
-    padding: 4px;
+    padding: 10px 0;
     border: 0;
     border-radius: 5px;
     color: #191970;
@@ -81,7 +87,8 @@ i{
 
 .loginarea a{
     display: block;
-    margin-top: 10px;
+    margin-top: 40px;
+    font-size: 20px;
     text-align: center;
     color: #FFFFFF;
 }
@@ -89,8 +96,9 @@ i{
 header .container,
 .transaction .container,
 .account--info .container{
-    width: 80%;
-    margin: auto;
+    width: 100%;
+    max-width: 1024px;
+    padding: 10px;
 }
 
 header{
@@ -137,36 +145,44 @@ header{
     font-size: 25px;
 }
 
-.transaction--buttons{
-    display: flex;
-}
-
-.transaction--buttons a{
-    display: block;
-    width: 100px;
-    background-color: #191970;
-    margin-top: 5px;
-    margin-right: 15px;
-    margin-left: 15px;
-    padding: 5px 0px;
-    border-radius: 2px;
-    text-decoration: none;
-    text-align: center;
-    color: #FFFFFF;
-}
-
 .transaction .container{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.transaction--buttons{
+    display: flex;
+    margin: 5px 15px;
+}
+
+.transaction--buttons a{
+    display: block;
+    text-decoration: none;
+}
+
+.transaction--buttons a,
+.transaction--form button{
+    width: 110px;
+    background-color: #191970;
+    margin: 5px 15px;
+    padding: 6px 0;
+    border: 0;
+    border-radius: 2px;
+    font-size: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
 .transaction--title{
     width: 100%;
     margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 25px;
     font-weight: bold;
     color: #191970;
+    text-align: center;
 }
 
 .transaction--table{
@@ -180,7 +196,8 @@ header{
 .table-item--header{
     background-color: #191970;
     color: #FFFFFF;
-    padding: 5px;
+    padding: 8px;
+    font-size: 20px;
 }
 
 .table-item--values{
@@ -191,27 +208,17 @@ header{
     display: flex;
     flex-direction: column;
     background-color: #BBBBBB;
-    padding-bottom: 10px;
 }
 
 .table-item--form{
-    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
 }
 
 .transaction--form input{
-    width: 100%;
-    height: 30px;
-}
-
-.transaction--form button{
-    width: 100px;
-    background-color: #191970;
-    margin-top: 5px;
-    margin-right: 15px;
-    margin-left: 15px;
-    border: 0;
-    border-radius: 2px;
-    font-size: 16px;
-    color: #FFFFFF;
-    cursor: pointer;
+    width: 90%;
+    padding: 4px;
+    font-size: 20px;
 }
