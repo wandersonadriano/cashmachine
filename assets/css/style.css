@@ -9,6 +9,22 @@ body{
     background-color: #DDD;
 }
 
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo i.fa-money-bill-alt{
+    font-size: 80px;
+}
+
+.logo-name{
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
 .loginpage{
     background-color: #0000cd;
 }
@@ -23,16 +39,11 @@ body{
 
 .loginarea{
     width: 100%;
+    max-width: 400px;
     background-color: #191970;
     padding: 20px;
     border-radius: 10px;
     color: #FFFFFF;
-}
-
-.loginarea--bankname{
-    font-size: 50px;
-    text-align: center;
-    font-weight: bold;
 }
 
 .loginarea--form{
@@ -46,7 +57,7 @@ body{
     margin-top: 30px;
 }
 
-i{
+.loginarea--form i{
     background-color: #BBBBBB;
     padding: 5px;
     border: 0;
@@ -55,6 +66,7 @@ i{
     border-bottom-left-radius: 5px;
     cursor: pointer;
 }
+
 
 .loginarea--form input{
     width: 100%;

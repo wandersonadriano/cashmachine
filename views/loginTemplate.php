@@ -1,10 +1,9 @@
-<!DOCTYPE html>
 <div class="loginpage">
     <div class="container">
         <div class="loginarea">
-            <div class="loginarea--bankname">
-                <span style="font-size:100px">$</span><br>
-                WBank
+            <div class="logo">
+                <i class="far fa-money-bill-alt"></i>
+                <span class="logo-name">WBank</span>
             </div>
             <div class="loginarea--form">
                 <form method="POST" action="models/login.php">
@@ -25,6 +24,4 @@
         </div>
     </div>
 </div>
-
-<script src="https://kit.fontawesome.com/10b84a3888.js" crossorigin="anonymous"></script>
 
