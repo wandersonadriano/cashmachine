@@ -2,8 +2,8 @@
     <div class="container">
         <div class="loginarea">
             <div class="logo">
-                <i class="far fa-money-bill-alt"></i>
-                <span class="logo-name">WBank</span>
+                <img src="assets/images/logo_by_logaster.png"/>
+                <span class="logo-name">Bank</span>
             </div>
             <div class="loginarea--form">
                 <form method="POST" action="models/login.php">

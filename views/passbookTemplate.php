@@ -1,7 +1,7 @@
 <div class="transaction">
     <div class="container">
         <div class="transaction--title">
-            Extrato/Movimentações
+            Extrato
         </div>
         <div class="transaction--table">
             <div class="table-item--header">Data</div>

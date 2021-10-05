@@ -5,10 +5,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>$ Bank</title>
+    <title>Bank</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+    <link rel="icon" href="assets/images/favicon_by_logaster.png" sizes="32x32">
 </head>
 <body>
 

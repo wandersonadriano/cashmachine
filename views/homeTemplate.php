@@ -1,10 +1,10 @@
-
 <div id="home">
     <header>
         <div class="container">
-            <h1>
-                WBank
-            </h1>
+            <div class="logo">
+                <img src="assets/images/logo_by_logaster.png"/>
+                <span class="logo-name">Bank</span>
+            </div>
         </div>
     </header>
             
