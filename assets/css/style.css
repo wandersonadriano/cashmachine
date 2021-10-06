@@ -11,21 +11,35 @@ body{
 
 .logo{
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
 .logo img{
-    width: 120px;
+    width: 80px;
+    margin-left: -12px;
 }
 
 .logo-name{
-    font-size: 30px;
-    font-weight: bold;
+    border-left: 2px solid #FFFFFF;
+    padding: 0 10px;
 }
 
 .loginpage{
     background-color: #0000cd;
+}
+
+.loginpage .logo{
+    flex-direction: column;
+}
+
+.loginpage .logo img{
+    width: 120px;
+    margin-left: 0;
+}
+
+.loginpage .logo-name{
+    font-size: 30px;
+    border: 0;
 }
 
 .loginpage .container{
@@ -109,20 +123,6 @@ body{
     width: 100%;
     max-width: 1024px;
     padding: 10px;
-}
-
-#home .logo{
-    flex-direction: row;
-}
-
-#home .logo img{
-    width: 80px;
-    margin-left: -12px;
-}
-
-#home .logo-name{
-    border-left: 2px solid #FFFFFF;
-    padding-left: 8px;
 }
 
 header{
@@ -245,4 +245,21 @@ header{
     width: 90%;
     padding: 4px;
     font-size: 20px;
+}
+
+@media (max-width:500px){
+    .logo{
+        flex-direction: column;
+    }
+
+    .logo img{
+        width: 120px;
+        margin-left: 0;
+    }
+
+    .logo-name{
+        font-size: 30px;
+        border: 0;
+    }
+
 }
