@@ -1,4 +1,4 @@
-# **Projeto de um caixa eletrônico:**
+# **Projeto caixa eletrônico:**
 
 # Sobre o projeto
 
@@ -8,15 +8,10 @@ Este é um projeto desenvolvido para o **curso de backend,** organizado pela [B7
 
 ## Layout
 
-**Tela de login**
-
 ![Tela de login](assets/images/login.png)
 
-**Home**
     
 ![Home](assets/images/home.png)
-
-**Tela para Operações de Depósito e Saque**
     
 ![Operação de Depósito](assets/images/transaction_deposit.png)
 
@@ -37,5 +32,4 @@ Este é um projeto desenvolvido para o **curso de backend,** organizado pela [B7
 # Autor
 
 Wanderson Adriano de Morais da Costa
-
-[https://www.linkedin.com/in/wanderson-adriano](https://www.linkedin.com/in/wanderson-adriano)
+[www.linkedin.com/in/wanderson-adriano-costa](www.linkedin.com/in/wanderson-adriano-costa)
