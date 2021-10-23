@@ -1,6 +1,8 @@
 <?php
+    session_start();
     require 'models/User.php';
     require 'models/Transaction.php';
+    require 'config.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -15,9 +17,6 @@
 <body>
 
 <?php
-    session_start();
-    require 'config.php';
-
     if(isset($_SESSION['account-id']) && !empty($_SESSION['account-id'])){
         include 'views/homeTemplate.php';
     } else {

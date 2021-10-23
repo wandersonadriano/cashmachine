@@ -36,7 +36,7 @@ class Transaction{
         if($sql->rowCount() > 0){
             foreach($sql->fetchAll() as $data){
                 array_push($array,[
-                    'id' => $data['$id'],
+                    'id' => $data['id'],
                     'transactionType' => $data['tipo'],
                     'transactionDate' => $data['data_operacao'],
                     'amount' => $data['valor']

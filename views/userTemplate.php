@@ -9,7 +9,7 @@
                 <?php echo $account['accountNumberDigit']; ?>
         </div>
     
-        <a href="models/logout.php">Sair</a>
+        <!--a href="models/logout.php">Sair</a-->
     </div>
 </div>
 

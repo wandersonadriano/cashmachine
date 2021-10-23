@@ -10,11 +10,17 @@ Este é um projeto desenvolvido para o **curso de backend,** organizado pela [B7
 
 **Tela de login**
 
-![Tela de login](assets/images/cashmachine_loginpage.png)
+![Tela de login](assets/images/login.png)
 
 **Home**
     
-![Home](assets/images/cashmachine_homepage.png)
+![Home](assets/images/home.png)
+
+**Tela para Operações de Depósito e Saque**
+    
+![Operação de Depósito](assets/images/transaction_deposit.png)
+
+![Operação de Saque](assets/images/transaction_withdraw.png)
 
 # Tecnologias utilizadas
 
@@ -32,4 +38,4 @@ Este é um projeto desenvolvido para o **curso de backend,** organizado pela [B7
 
 Wanderson Adriano de Morais da Costa
 
-[https://www.linkedin.com/in/wanderson-adriano-602612116](https://www.linkedin.com/in/wanderson-adriano-602612116)
+[https://www.linkedin.com/in/wanderson-adriano](https://www.linkedin.com/in/wanderson-adriano)

@@ -5,17 +5,26 @@
                 <img src="assets/images/logo_by_logaster.png"/>
                 <span class="logo-name">Bank</span>
             </div>
+            <a href="models/logout.php">
+                <div class="btn-logout">
+                    <img src="assets/images/outline_logout_white_24dp.png" />
+                    <span>Sair</span>
+                </div>    
+            </a>
         </div>
     </header>
             
     <?php
-        $account = User::showAccountData($pdo);
-    
+        $user = new User();
+
+        $account = $user->showAccountData($pdo);
+
         if(!isset($account)){
             echo "Erro ao acessar dados da conta!";
         } else {
             include 'userTemplate.php';
         }
+        
     ?>
 
     <?php
